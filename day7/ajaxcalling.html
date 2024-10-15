@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/ajax.js"></script>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        $(document).ready(function(){
+          $("#hide").click(function(){
+            $("p").hide();
+          });
+          $("#show").click(function(){
+            $("p").show();
+          });
+        });
+
+        $(document).ready(function(){
+            $("#fade").click(function(){
+                $("#fade1").fadeTo("slow",0.15);
+                $("#fade2").fadeTo("slow",0.4);
+                $("#fade3").fadeTo("slow",0.7);
+            });
+        });
+
+        $(document).ready(function(){
+        $("button").click(function(){
+                $("#div1").fadeTo("slow", 0.15);
+                $("#div2").fadeTo("slow", 0.4);
+                $("#div3").fadeTo("slow", 0.7);
+            });
+        });
+
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown("slow");
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="demo1" id="demo1"></div>
+    <div id="demo2"></div>
+  
+
+    <p>If you click on the "Hide" button, I will disappear.</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    
+    <button id="fade">Fade</button>
+    <div id="fade1" style="background-color: green; height: 50px; width: 50px; margin: 10px 0;"></div>
+    <div id="fade2" style="background-color: rgb(128, 0, 128); height: 50px; width: 50px; margin: 10px 0;"></div>
+    <div id="fade3" style="background-color: rgb(128, 4, 0); height: 50px; width: 50px; margin: 10px 0;"></div>
+    
+
+    <button>Click to fade boxes</button><br><br>
+
+    <div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+    <div id="flip">Lorem, ipsum dolor.</div>
+    <div id="panel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut odit vero odio expedita rerum ratione, voluptatibus commodi officiis quidem ea.</div>
+    
+    <button id="ani1" onclick="fun7()">Animation</button>
+    <div id="ani2" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+    <button id="stop2" onclick="fun8()">Stop sliding</button>
+    <div id="flip2" onclick="fun8()">Click to slide down panel</div>
+    <div id="panel2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eum velit similique eveniet incidunt, enim provident voluptate praesentium vitae sunt molestias repudiandae dolorum consequuntur dolorem eius facere quis accusamus distinctio? Dolores veritatis tempora voluptatum, magni, ipsam commodi distinctio obcaecati odit officiis nostrum, consequatur quas? Dolor nihil velit asperiores rerum a.</div>
+
+
+    
+</body>
+</html>
