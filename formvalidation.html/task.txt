@@ -1,0 +1,11 @@
+
+
+button ->summit
+checkbox -> branch (mba or engg)
+textarea -> comments
+radio ->gender
+email -> 
+number
+upload
+password
+

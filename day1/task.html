@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="task.css">
+    <script src="form.js"></script>
+    <script>
+        function validate(){
+            alter('HELLO');
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="col">
+                <form >
+                    <h2>Grade Volleyball Registration Form</h2>
+                    <p>Participant Name</p>
+                    <div class="item">
+                        <div class="sub-item" id="item-1-input">
+                            <input type="text" name="fname" placeholder="First" id="fname">
+                            <p id="alertmsg" style="color: red;"></p>
+                        
+                        </div>
+                        <div class="sub-item" id="item-2-input">
+                            <input type="text" name="lname" placeholder="Last" id="lname">
+                            <p id="alertmsg" style="color: red;"></p>
+                        
+                        </div>
+                    </div>
+                    <p>Age</p>
+                    <div class="item">
+                        <input type="text" placeholder="Age" name="age" id="age">
+                        <p id="alertmsg" style="color: red;"></p>
+                    
+                    </div>
+                    <p>Grade</p>
+                    <div class="item-1">
+                        <span>BCA:</span>
+                        <input type="checkbox" name="bca" id="bca">
+                        <span>MCA:</span>
+                        <input type="checkbox" name="mca" id="mca">
+                        <span>Other:</span>
+                        <input type="checkbox" name="other" id="other">
+                        <p id="alertmsg" style="color: red;"></p>
+                    
+                    </div>
+                    <p>School District</p>
+                    <div class="item">
+                        <input type="text" placeholder="School District" name="schoolDist" id="schoolDist">
+                        <p id="alertmsg" style="color: red;"></p>
+                    
+                    </div>
+                    <p>Shirt Size</p>
+                    <div class="item">
+                        <select name="shirtSize" id="shirtSize">
+                          <option value="select">Please select</option>
+                          <option value="S">Small</option>
+                          <option value="M">Medium</option>
+                          <option value="L">Large</option>
+                        </select>
+                        <p id="alertmsg" style="color: red;"></p>
+                    </div>
+                    
+                    <p>Emergency Contact</p>
+                    <div class="item">
+                        <div class="sub-item" id="item-1-input">
+                            <input type="text" name="email" id="email" placeholder="Email" required>
+                            <p id="alertmsg" style="color: red;"></p>
+                        
+                        </div>
+                        <div class="sub-item" id="item-2-input">
+                            <input type="text" name="mobile" id="mobile" placeholder="mobile">
+                            <p id="alertmsg" style="color: red;"></p>
+                        
+                        </div>
+                    </div>
+                    <p>Gender</p>
+                    <div class="item-1 gender">
+                      <span>Male:</span>
+                      <input type="radio" name="gender" id="male" value="male">
+                      <span>Female:</span>
+                      <input type="radio" name="gender" id="female" value="female">
+                      <span>Other:</span>
+                      <input type="radio" name="gender" id="other-gender" value="other">
+                      <p class="alertmsg" style="color: red;"></p>
+                    </div>
+                    <p>Photo</p>
+                    <div class="item">
+                        <input type="file" name="image" id="image" placeholder="Image">
+                        <p id="alertmsg" style="color: red;"></p>
+                    
+                    </div>
+                    <p>Password</p>
+                    <div class="item">
+                        <input type="password" name="password" id="password" placeholder="password">
+                        <p id="alertmsg" style="color: red;"></p>
+                    
+                    </div>
+                    <div class="item-2">
+                        <input type="submit" onclick="return validate()" name="submit" value="Submit" id="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

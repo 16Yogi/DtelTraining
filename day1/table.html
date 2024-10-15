@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,th,td{
+        border: 4px solid black;
+        border-collapse: collapse;
+        border-color: brown;
+        border-radius: 5px;
+        border-left-style: dashed;
+        border-right-style: dotted;
+        border-top-style: double;
+        border-bottom-style: outset;
+    }
+    tr:nth-child(even){
+        background-color: aqua
+    }
+    td:nth-child(even),th:nth-child(odd){
+        background-color: blueviolet;
+    }
+</style>
+<body>
+    <h2>What is table ?</h2>
+    <h2><b>Ans-</b>HTML tables allow web developers to arrange data into rows and columns.</h2>
+    <ul>
+        <li>td stands for table data.</li>
+        <li>tr stands for table row.</li>
+        <li>th stands for table header.</li>
+    </ul>
+    <h1><u>example 1</u></h1>
+    <table>
+        <tr>
+            <th>Sr no</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ram Lal</td>
+            <td>7187894147</td>
+            <td>ramlal@gmail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Motilal</td>
+            <td>7185489414</td>
+            <td>motilal@gmail.com</td>
+        </tr>
+    </table>
+
+    <h1><u>Example 2(Table border)</u></h1>
+    <table class="table2">
+        <tr>
+            <th>sr no.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ram Lal</td>
+            <td>7187894147</td>
+            <td>ramlal@gmail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Motilal</td>
+            <td>7185489414</td>
+            <td>motilal@gmail.com</td>
+        </tr>
+    </table>
+
+    <h1><u>Example 3(Table border)</u></h1>
+    <table class="table3">
+        <tr>
+            <th colspan="2">sr no.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ram Lal</td>
+            <td>7187894147</td>
+            <td>ramlal@gmail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td rowspan="3">Motilal</td>
+            <td>7185489414</td>
+            <td>motilal@gmail.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Motilal</td>
+            <td>7185489414</td>
+            <td>motilal@gmail.com</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Motilal</td>
+            <td>7185489414</td>
+            <td>motilal@gmail.com</td>
+        </tr>
+    </table>
+    <h1>colgroup</h1>
+    <table>
+        <tr>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+        </tr>
+        <tr>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+        </tr>
+        <tr>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+        </tr>
+        <tr>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+        </tr>
+        <tr>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+            <td>Hello</td>
+        </tr>
+    </table>
+</body>
+</html>
