@@ -1,0 +1,41 @@
+
+
+
+left join    -> table 1 , table 2 
+ right join 
+inner
+outer
+
+
+left join ->     left table complete, right table should give only common data.
+
+
+
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    CustomerName VARCHAR(100),
+    ContactName VARCHAR(50),
+    Country VARCHAR(50)
+);
+
+
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    OrderDate DATE,
+    CustomerID INT,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+INSERT INTO Customers (CustomerID, CustomerName, ContactName, Country)
+VALUES (1, 'John Doe', 'John', 'USA');
+
+INSERT INTO Orders (OrderID, OrderDate, CustomerID)
+VALUES (101, '2024-10-15', 1);
+
+
+
+
+today join 
+next day -> 20 to 30 lastday revise join ->php basic
+
+next day -> 10 to 20 mints php basic.
