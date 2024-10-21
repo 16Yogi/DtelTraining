@@ -1,5 +1,5 @@
 <?php
-// include("../asset/backend/insert.php");
+include("../asset/backend/insert.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

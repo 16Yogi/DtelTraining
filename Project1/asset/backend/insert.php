@@ -5,38 +5,53 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 if (isset($_POST['submit'])) {
-    $fname = mysqli_real_escape_string($con, $_POST['fname']);
-    $lname = mysqli_real_escape_string($con, $_POST['lname']);
-    $email = mysqli_real_escape_string($con, $_POST['email']);
-    $mobile = mysqli_real_escape_string($con, $_POST['mobile']);
-    $password = mysqli_real_escape_string($con, $_POST['password']);
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    $state = $_POST['state'];
+    $dist = $_POST['dist'];
+    $password = $_POST['password'];
 
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    // $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     
-    if($fname == "" || $lname == "" || $email == "" || $mobile == "" || $password == ""){
+    if ($fname == "" || $lname == "" || $email == "" || $mobile == "" || $password == "") {
         echo "Please fill all the fields";
-    }else if(){
-
-    }
-
-
-
-    $query = "INSERT INTO signup (fname, lname, email, mobile, password) VALUES ('$fname', '$lname', '$email', '$mobile', '$hashed_password')";
-    
-    echo $query; 
-
-    $result = mysqli_query($con, $query);
-    
-    if ($result) {
-        echo "<script>alert('Data inserted successfully');</script>";
+    } else if (!fnameValidate($fname)) {
+        echo "Enter a valid first name";
+    } else if (!fnameValidate($lname)) {
+        echo "Enter a valid last name";
+    } else if (!validateEmail($email)) {
+        echo "Invalid email";
+    } else if (strlen($password) < 8) { 
+        echo "Password must be at least 8 characters long";
     } else {
-        echo "<script>alert('Data not inserted: " . mysqli_error($con) . "');</script>";
+        $query = "INSERT INTO signup (fname, lname, email, mobile,state,dist, password) VALUES ('$fname', '$lname', '$email', '$mobile',$state,$dist, '$password')";
+    
+        echo $query; 
+    
+        $result = mysqli_query($con, $query);
+        
+        if ($result) {
+            echo "<script>alert('Data inserted successfully');</script>";
+        } else {
+            echo "<script>alert('Data not inserted: " . mysqli_error($con) . "');</script>";
+        }
     }
+}else{
+    echo "Something went to wrong";
 }
 
-function validateEmail($email){
+function validateEmail($email) {
     $pattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
+    return preg_match($pattern, $email);
 }
+
+function fnameValidate($name) {
+    $pattern = "/^[a-zA-Z]+$/"; 
+    return preg_match($pattern, $name);
+}
+
 ?>
 
 
