@@ -10,22 +10,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <?php
+       include 'asset/backend/globalfunction.php'; 
+    ?>
     <div class="container-fluid bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="index.php">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li>
-                        <a class="nav-link" href="html/login.php" id="login">Login</a>
+                        <a class="nav-link" href="html/login2.php" id="login"><?php echo $login; ?></a>
                     </li>
                     <li>
-                        <a class="nav-link" href="html/registration.php">singup</a>
+                        <a class="nav-link" href="html/registration2.php">singup</a>
                     </li>
                 </ul>
             </div>

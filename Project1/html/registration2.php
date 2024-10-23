@@ -1,5 +1,5 @@
 <?php
-// include("../asset/backend/insert.php");
+include("../asset/backend/insert.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,66 +15,64 @@
 </head>
 
 <body>
-    <div class="container-fluid py-5" id="login-cf">
+    <div class="container-fluid py-2" id="login-cf">
         <div class="container py-5">
+            <div class="col">
+                <a href="../home.php">Home</a>
+            </div>
             <div class="col-5 mx-auto py-3 form">
                 <h3>Signup</h3> <hr>
                 <form id="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data" onsubmit="return clickfun()">
                     <div class="form-row">
                         <div class="col form-item">
-                            <label for="fname">First Name</label> 
-                            <input name="fname" type="text" class="form-control" placeholder="First name" id="fname" >
-                            <!-- <p id="first_name" class="text-danger"></p> -->
-                            <div class="error" id="error"></div>
+                            <label for="fname">First Name</label>
+                            <input name="fname" type="text" class="form-control" placeholder="First name" id="fname">
+                            <div class="error"></div> 
                         </div>
                         <div class="col form-item">
-                            <label for="lname">Last Name</label> 
-                            <input name="lname" type="text" class="form-control" placeholder="Last name" id="lname" >
-                            <!-- <p id="last_name" class="text-danger"></p> -->
-                            <div class="error" id="error"></div>
+                            <label for="lname">Last Name</label>
+                            <input name="lname" type="text" class="form-control" placeholder="Last name" id="lname">
+                            <div class="error"></div> 
                         </div>
                     </div>
                     <div class="form-group pt-2 form-item">
                         <label for="email">Email address</label>
-                        <input name="email" type="email" class="form-control" placeholder="Email" id="email" aria-describedby="emailHelp" >
-                        <div class="error" id="error"></div>
-                        <!-- <p id="val_email" class="text-danger"></p> -->
+                        <input name="email" type="email" class="form-control" placeholder="Email" id="email" aria-describedby="emailHelp">
+                        <div class="error"></div> 
                     </div>
                     <div class="form-group form-item">
-                        <label for="mobile">Mobile</label> 
-                        <input name="mobile" type="text" class="form-control" placeholder="Mobile" id="mobile" >
-                        <div class="error" id="error"></div>
-                        <!-- <p id="val_mobil" class="text-danger"></p> -->
+                        <label for="mobile">Mobile</label>
+                        <input name="mobile" type="text" class="form-control" placeholder="Mobile" id="mobile">
+                        <div class="error"></div> 
                     </div>
                     <div class="form-row">
                         <div class="col">
-                            <label for="state">State</label> 
+                            <label for="state">State</label>
                             <select id="state" name="state" class="form-control">
                                 <option value="">Select State</option>
-                                <!-- State options will be loaded here -->
+                                
                             </select>
                         </div>
                         <div class="col">
-                            <label for="dist">District</label> 
+                            <label for="dist">District</label>
                             <select id="dist" name="dist" class="form-control">
                                 <option value="">Select District</option>
-                                <!-- District options will be loaded here -->
+                                
                             </select>
                         </div>
                     </div>
                     <div class="form-group form-item">
                         <label for="password">Password</label>
-                        <input name="password" type="password" class="form-control" placeholder="Password" id="password" >
-                        <div class="error" id="error"></div>
-                        <!-- <P id="val_pass" class="text-danger"></P> -->
+                        <input name="password" type="password" class="form-control" placeholder="Password" id="password">
+                        <div class="error"></div> 
                     </div>
-                    <!-- <p id="all" class="text-danger"></p> -->
                     <input type="submit" class="btn btn-primary" name="submit" value="Submit">
                 </form>
+
             </div>
         </div>
     </div>
-    <script src="../asset/js/registrationaa.js"></script>
+    <script src="../asset/js/registrationaaa.js"></script>
 
     <script>
         $(document).ready(function() {

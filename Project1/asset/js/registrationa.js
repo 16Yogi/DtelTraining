@@ -46,12 +46,12 @@ let mobile = document.getElementById("mobile");
 let password = document.getElementById("password");
 
 function clickfun(){
-    alert("clicked");
-    // if(validation()){
-    //     return true;
-    // }else{
-    //     return false;
-    // }
+    // alert("clicked");
+    if(validation()){
+        return true;
+    }else{
+        return false;
+    }
 }
 
 // change class name in error situtation

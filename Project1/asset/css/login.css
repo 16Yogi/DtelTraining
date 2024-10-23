@@ -1,4 +1,13 @@
-#login-cf #form{
+#login-cf .form{
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+#login-cf .form.success input{
+    border-color: green;
+}
+#login-cf .form.error input{
+    border-color: red;
+}
+#login-cf .form .error{
+    border-color: red;
 }

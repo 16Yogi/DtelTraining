@@ -107,49 +107,49 @@
 
 
 // start codition
-// conntion
-session_start();
+// // conntion
+// session_start();
 
-include("../asset/backend/connection.php");
+// include("../asset/backend/connection.php");
 
-if(isset($_POST['login'])){
-  // check username and password 
-  if(isset($_REQUEST['email']) && isset($_REQUEST['password'])){
-    $email = $_REQUEST['email'];
-    $password = $_REQUEST['password'];
+// if(isset($_POST['login'])){
+//   // check username and password 
+//   if(isset($_REQUEST['email']) && isset($_REQUEST['password'])){
+//     $email = $_REQUEST['email'];
+//     $password = $_REQUEST['password'];
      
-    // echo  "session: $email,$password";
+//     // echo  "session: $email,$password";
 
-    $_SESSION['email'] =  $email;
-    $_SESSION['password'] = $password;
+//     $_SESSION['email'] =  $email;
+//     $_SESSION['password'] = $password;
     
-    // echo $_SESSION['email'] =  $email;
-    // echo  $_SESSION['password'] = $password;
+//     // echo $_SESSION['email'] =  $email;
+//     // echo  $_SESSION['password'] = $password;
     
-    $sql = "SELECT * FROM signup";
-    $result = mysqli_query($con,$sql);
-    // $row = mysqli_fetch_assoc($result);
-    // if($row['email'] == $email && $row['password'] == $password){
-    // echo "$username,<br> $password";
+//     $sql = "SELECT * FROM signup";
+//     $result = mysqli_query($con,$sql);
+//     // $row = mysqli_fetch_assoc($result);
+//     // if($row['email'] == $email && $row['password'] == $password){
+//     // echo "$username,<br> $password";
   
-    while($row=mysqli_fetch_assoc($result)){
-      $usernamedb = $row['email'];
-      $passworddb = $row['password'];
-      // echo  "$usernamedb,<br> $passworddb";
-      // echo "$email,$password";
+//     while($row=mysqli_fetch_assoc($result)){
+//       $usernamedb = $row['email'];
+//       $passworddb = $row['password'];
+//       // echo  "$usernamedb,<br> $passworddb";
+//       // echo "$email,$password";
   
-      if($email==  $usernamedb && $password == $passworddb){
-        header("../index.php");
-        // echo "<script>location.href='../index.php'</script>";
-      }else{
-        header("login.php");
-        echo "<script>document.getElementById('logfailed').innerHTML='username and password are invalid'</script>";
+//       if($email==  $usernamedb && $password == $passworddb){
+//         header("../index.php");
+//         // echo "<script>location.href='../index.php'</script>";
+//       }else{
+//         header("login.php");
+//         echo "<script>document.getElementById('logfailed').innerHTML='username and password are invalid'</script>";
         
-        // echo "<script>local</script>";
-      }
-    }
+//         // echo "<script>local</script>";
+//       }
+//     }
 
-  }
+//   }
 
   
   // $email  = $_REQUEST['email'];
@@ -176,8 +176,11 @@ if(isset($_POST['login'])){
   //   }
   // }
     // echo  "$usernamedb,<br> $passworddb";
-}
+// }
 // end condition
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

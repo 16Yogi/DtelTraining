@@ -1,30 +1,39 @@
 <?php
     include("../asset/backend/connection.php");
+    include("../asset/backend/globalfunction.php"); 
     
     if(isset($_POST['login'])){
-        $useremail = $_POST['email1'];
-        $userpassword = $_POST['password1'];
+        test();
+        echo test().$useremail;
+        echo "<br>";
+        echo test().$userpassword;
+        // $useremail = $_POST['email1'];
+        // $userpassword = $_POST['password1'];
         
-        // echo $useremail;
-        // echo $userpassword;
+        // $sql = "SELECT * FROM signup";
+        // $result = mysqli_query($con,$sql);
+    
+        // while($row=mysqli_fetch_assoc($result)){
+        //     if($row['email']==$useremail && $row['password']==$userpassword){
 
-        $sql = "SELECT * FROM signup";
-        $result = mysqli_query($con,$sql);
+        //         // session_start();
+        //         session_start();
+        //         $_SESSION['uremail'] = $useremail;
+        //         $_SESSION['urpass'] = $userpassword;
     
-        while($row=mysqli_fetch_assoc($result)){
-            $usernamedb = $row['email'];
-            $passworddb = $row['password'];
-            // echo  $usernamedb;
-            // echo   $passworddb;
+        //         $sessionEmail = $_SESSION['uremail'];
+        //         $sessionPassword = $_SESSION['urpass'];
+                
+        //         echo "<script>alert('login successful')</script>";
+        //         echo "<script>location.href='../home.php'</script>";
+        //     }else{
+        //         echo "alert('login failed')";
+        //     }
+        // }
         
-            if($usermail==$usernamedb &&  $userpassword==$passworddb){
-                echo "login successfull";
-            }else{
-                echo "login falied";
-            }
-        }
-        
-    
+     
+    // }else{
+    //     echo "not clicked";
     }
 
 ?>
@@ -44,6 +53,7 @@
 <body>
     <div class="container-fluid py-5" id="login-cf">
         <div class="container py-5">
+            <a href="../home.php">Home</a>
             <div class="col-5 mx-auto py-3" id="form">
                 <h3>Login</h3>
                 <hr>
