@@ -3,7 +3,7 @@
     include("../asset/backend/globalfunction.php"); 
     
     if(isset($_POST['login'])){
-        test();
+        loginfun();
         echo test().$useremail;
         echo "<br>";
         echo test().$userpassword;
@@ -53,9 +53,11 @@
 <body>
     <div class="container-fluid py-5" id="login-cf">
         <div class="container py-5">
-            <a href="../home.php">Home</a>
-            <div class="col-5 mx-auto py-3" id="form">
-                <h3>Login</h3>
+            <div class="col-5 mx-auto py-3 form" id="form">
+                <div class="row">
+                    <h3 class="col-9">Login</h3>
+                    <a href="../home.php" class="nav-link"><b>Home</b></a>
+                </div>
                 <hr>
                 <form method="POST" action="">
                     <div class="form-group">
@@ -65,6 +67,12 @@
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password" name="password1" placeholder="Password..." class="form-control" id="exampleInputPassword1" required>
+                    </div>
+                    <div class="col p-0">
+                        <p class="row">
+                            <a href="update_form.php" class="nav-link">Forget Password</a>
+                            <a href="registration2.php" class="nav-link">Signup</a>
+                        </p>
                     </div>
                     <p id="logfailed" class="text-danger"></p>
                     <button type="submit" class="btn btn-primary" name="login">Login</button>

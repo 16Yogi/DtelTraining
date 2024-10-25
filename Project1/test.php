@@ -110,5 +110,16 @@
             </div>
         </div>
     </div>
+    <div id="demo"></div>
 </body>
 </html>
+
+
+<script>
+    const lis = document.createElement("a");
+    lis.href="google.com";
+    lis.innerText = "This is a paragraph";
+
+    // Append the list item to the div with ID 'demo'
+    document.getElementById("demo").appendChild(lis);
+</script>

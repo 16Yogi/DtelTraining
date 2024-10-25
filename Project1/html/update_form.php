@@ -1,5 +1,5 @@
 <?php
-include("../asset/backend/insert.php");
+include("../asset/backend/update.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,13 +17,15 @@ include("../asset/backend/insert.php");
 <body>
     <div class="container-fluid py-2" id="login-cf">
         <div class="container py-5">
+
             <div class="col-5 mx-auto py-3 form">
+                
                 <div class="row">
-                    <h3 class="col-9">Registration</h3>
+                    <h3 class="col-9">Edit Information</h3>
                     <a href="../home.php" class="nav-link"><b>Home</b></a>
                 </div>
                 <hr>
-                <form id="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data" onsubmit="return clickfun()">
+                <form id="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data" onsubmit="return clickfuna()">
                     <div class="form-row">
                         <div class="col form-item">
                             <label for="fname">First Name</label>
@@ -35,11 +37,6 @@ include("../asset/backend/insert.php");
                             <input name="lname" type="text" class="form-control" placeholder="Last name" id="lname">
                             <div class="error"></div> 
                         </div>
-                    </div>
-                    <div class="form-group pt-2 form-item">
-                        <label for="email">Email address</label>
-                        <input name="email" type="email" class="form-control" placeholder="Email" id="email" aria-describedby="emailHelp">
-                        <div class="error"></div> 
                     </div>
                     <div class="form-group form-item">
                         <label for="mobile">Mobile</label>
@@ -69,8 +66,8 @@ include("../asset/backend/insert.php");
                     </div>
                     <div class="form-group form-item">
                         <p class="row">
-                            <a href="update_form.php" class="nav-link">Forget Password</a>
-                            <a href="login2.php" class="nav-link">Signin</a>
+                            <a href="registration2.php" class="nav-link">Registration Here...</a>
+                            <a href="login2.php" class="nav-link">Login</a>
                         </p>
                     </div>
                     <input type="submit" class="btn btn-primary" name="submit" value="Submit">
@@ -79,7 +76,7 @@ include("../asset/backend/insert.php");
             </div>
         </div>
     </div>
-    <script src="../asset/js/registrationaaa.js"></script>
+    <script src="../asset/js/registration.js"></script>
 
     <script>
         $(document).ready(function() {

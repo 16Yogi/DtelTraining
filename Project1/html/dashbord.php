@@ -6,6 +6,13 @@
         // echo "Connection failed";
     }
 ?>
+
+<?php
+    if(isset($_POST['update_profile'])){
+        echo "<script>alert('Hello This is update')</script>";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +26,6 @@
         <div class="row">
             <div class="col-2 py-2" id="left-side">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <button class="nav-link active" id="v-pills-home-tab" data-toggle="pill" data-target="#v-pills-home" type="button">Home</button>
                     <button class="nav-link" id="v-pills-profile-tab" data-toggle="pill" data-target="#v-pills-profile" type="button">Profile</button>
                     <button class="nav-link" id="v-pills-messages-tab" data-toggle="pill" data-target="#v-pills-messages" type="button">Messages</button>
                     <button class="nav-link" id="v-pills-users-tab" data-toggle="pill" data-target="#v-pills-settings" type="button">All Users</button>
@@ -27,11 +33,63 @@
             </div>
             <div class="col-9 mx-3 py-3 px-4" id="right-side">
                 <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel">
-                        <h1>Home</h1>
-                    </div>
+                    
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel">
                         <h1>Profile</h1>
+                        <hr>
+                        <?php
+                            session_start();
+                            $userid = $_SESSION['uremail'];
+                            
+                            if($userid == true){
+                                $select = "SELECT * FROM signup WHERE email = '$userid'";
+                                $result = mysqli_query($con, $select);
+                                $row = mysqli_fetch_assoc($result);
+                                $fname = $row['fname'];
+                                $lname = $row['lname'];    
+                                $email = $row['email'];    
+                                $mobile = $row['mobile']; 
+                                
+                                $mystate = $row['state'];
+                                $stateNum = intval($mystate);
+                                $selectState = "SELECT * FROM state WHERE sid = $stateNum";
+                                $resultState = mysqli_query($con, $selectState);
+                                $rowState = mysqli_fetch_assoc($resultState);
+
+                                $dist = $row['dist']
+                                 
+                        ?>
+                        <div class="col">
+                            <h4>Name - <?php  echo $fname." ".$lname; ?></h4>
+                            <p><b>Email - </b><?php echo  $email; ?></p>
+                            <p><b>Mobile - </b><?php echo   $mobile; ?></p>
+                            <p><b>State -</b><?php echo $rowState['state'];?></p>
+                            <p><b>District -</b><?php echo $dist; ?></p>
+                            <hr>
+                            <div class="col row">
+                                <a href="html/update_form.php" class="nav-link">
+                                    <button name="update_profile" id="update_profile" type="button" class="btn btn-success text-white">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                </a>
+                                <a href="html/delete.php" name="delete" class="nav-link"> 
+                                    <button class="btn btn-danger text-white">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <?php
+                            }else{
+                        
+                        ?>
+                        <div class="col">
+                            <h3>Sorry...! user not loggedin</h3>
+                        </div>
+                        <?php
+                            }
+                        ?>
+
                     </div>
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel">
                         <h1>Messages</h1>
