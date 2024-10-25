@@ -1,0 +1,38 @@
+#form-cf{
+    height: 858px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("https://images.pexels.com/photos/572056/pexels-photo-572056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+#form-cf #form-c{
+    height: auto;
+    background-color: rgba(243, 243, 243, 0.5);
+}
+#form-cf #form-c #form{
+    height: auto;
+    /* width: 100; */
+}
+#form-cf #form-content{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("https://images.pexels.com/photos/2422286/pexels-photo-2422286.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+#form-cf button{
+    width: 100%;
+    font-weight: 700;
+}
+#form-cf h4{
+    font-weight: 700;
+}
+.error{
+    font-size: 13px;
+    color: red;
+}
+.error input{
+    color: red;
+    border: 2px solid rgb(194, 13, 13);
+
+}
+.success input {
+    border: 2px solid green;
+}
