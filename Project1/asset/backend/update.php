@@ -6,6 +6,9 @@
     session_start();
     $userid = $_SESSION['uremail'];
 
+
+ 
+
     if(isset($_POST['submit'])){
         echo "Clicked".$userid;
         $fname = $_POST['fname'];
@@ -13,6 +16,10 @@
         $mobile = $_POST['mobile'];
         $state = $_POST['state'];
         $dist = $_POST['dist'];
+
+
+
+$result = mysqli_query($conn, $select_query);       
 
         echo $fname,$lname,$mobile,$state,$state;
 

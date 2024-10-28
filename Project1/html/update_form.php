@@ -55,7 +55,6 @@ include("../asset/backend/update.php");
                             <label for="dist">District</label>
                             <select id="dist" name="dist" class="form-control">
                                 <option value="">Select District</option>
-                                
                             </select>
                         </div>
                     </div>

@@ -1,4 +1,12 @@
+const fname = document.getElementById("fname");
+const lname = document.getElementById("lname");
+const email = document.getElementById("email");
+const mobile = document.getElementById("mobile");
+const password1 = document.getElementById("password1");
+const password2 = document.getElementById("password2");
+
 function checkfun() {
+    // fetchAPI();
     return validation();
 }
 
@@ -31,66 +39,137 @@ const isValidName = name => {
 };
 
 const validation = () => {
-    const fname = document.getElementById("fname").value.trim();
-    const lname = document.getElementById("lname").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const mobile = document.getElementById("mobile").value.trim();
-    const password1 = document.getElementById("password1").value.trim();
-    const password2 = document.getElementById("password2").value.trim();
+    const fname1 = fname.value.trim();
+    const lname1 = lname.value.trim();
+    const email1 = email.value.trim();
+    const mobile1 = mobile.value.trim();
+    const password11 = password1.value.trim();
+    const password22 = password2.value.trim();
 
     let isValid = true;
 
-    if (fname === "") {
+    if (fname1 === "") {
         setError(document.getElementById("fname"), "First name is required");
         isValid = false;
-    } else if (!isValidName(fname)) {
+    } else if (!isValidName(fname1)) {
         setError(document.getElementById("fname"), "First name must be alphabet");
         isValid = false;
     } else {
         setSuccess(document.getElementById("fname"));
     }
 
-    if (lname === "") {
+    if (lname1 === "") {
         setError(document.getElementById("lname"), "Last name is required");
         isValid = false;
-    } else if (!isValidName(lname)) {
+    } else if (!isValidName(lname1)) {
         setError(document.getElementById("lname"), "Last name must be alphabet");
         isValid = false;
     } else {
         setSuccess(document.getElementById("lname"));
     }
 
-    if (email === "") {
+    if (email1 === "") {
         setError(document.getElementById("email"), "Email is required");
         isValid = false;
-    } else if (!isValidEmail(email)) {
+    } else if (!isValidEmail(email1)) {
         setError(document.getElementById("email"), "Invalid email address");
         isValid = false;
     } else {
         setSuccess(document.getElementById("email"));
     }
 
-    if (mobile === "") {
+    if (mobile1 === "") {
         setError(document.getElementById("mobile"), "Mobile number is required");
         isValid = false;
-    } else if (mobile.length !== 10 || isNaN(mobile)) {
+    } else if (mobile1.length !== 10 || isNaN(mobile1)) {
         setError(document.getElementById("mobile"), "Invalid mobile number");
         isValid = false;
     } else {
         setSuccess(document.getElementById("mobile"));
     }
 
-    if (password1 === "" || password2 === "") {
+    if (password11 === "" || password22 === "") {
         setError(document.getElementById("password1"), "Password is required");
         setError(document.getElementById("password2"), "Password is required");
         isValid = false;
-    } else if (password1 !== password2) {
+    } else if (password11 !== password22) {
         setError(document.getElementById("password2"), "Passwords do not match");
         isValid = false;
     } else {
         setSuccess(document.getElementById("password1"));
         setSuccess(document.getElementById("password2"));
     }
+    
 
+    fetch('database.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            fname: fname,
+            lname: lname,
+            email: email,
+            mobile: mobile,
+            password: password1, // Use 'password' instead of 'password1' to match the backend
+            gender: gender
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message); // Access the message property from the response
+    })
+    .catch(error => console.error(error));
+
+    
     return isValid;
 };
+
+// function fetchAPI(){
+//     fetch('database.php', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//             fname: fname,
+//             lname: lname,
+//             email: email,
+//             mobile: mobile,
+//             password: password1, // Use 'password' instead of 'password1' to match the backend
+//             gender: gender
+//         })
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         alert(data.message); // Access the message property from the response
+//     })
+//     .catch(error => console.error(error));
+    
+// }
+
+// function fetchAPI(){
+//     // REST API for sending data
+//     fetch('database.php',{
+//         method: 'POST',
+//         headers:{
+//             'Content-Type':'application/json'
+//         },
+//         body:JSON.stringify({
+//             fname:fname,
+//             lname:lname,
+//             email:email,
+//             mobile:mobile,
+//             gender:gender,
+//             password:password1
+//         })
+//     })
+//     .then(response => response.json())
+//     .then(data =>{
+//         alert(data);
+//     })
+//     .catch(error =>{
+//         console.error(error);
+//     })
+//     // REST APT sending data end 
+// }
