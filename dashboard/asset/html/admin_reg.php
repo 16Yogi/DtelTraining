@@ -1,3 +1,8 @@
+<!-- insert include -->
+<?php
+    include("../database/insert.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +30,7 @@
                     <h2 class="text-center">Admin Registration</h2>
                 </div>
                 <hr>
-                <form action="" onsubmit="return checkfun()">
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" onsubmit="return checkfun()">
                     <div class="form-row form-group">
                         <div class="col">
                             <label for="fullname">Full Name</label>

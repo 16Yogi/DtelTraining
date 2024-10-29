@@ -1,3 +1,6 @@
+<?php
+   include("asset/database/insert.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -125,7 +128,7 @@
                         <h1>Add user</h1>
                         <hr>
                         <div class="col">
-                            <form action="" onsubmit="return checkfun()">
+                            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" onsubmit="return checkfun()">
                                 <div class="form-row form-group">
                                     <div class="col">
                                         <label for="fullname">Full Name</label>
@@ -153,7 +156,7 @@
                                 <div class="form-row form-group">
                                     <div class="col">
                                         <label for="department">Department</label>
-                                        <select id="department" class="form-control">
+                                        <select id="department" class="form-control" name="department">
                                             <option value="">Select Department</option>
                                             <option value="MCA">MCA</option>
                                             <option value="BCA">BCA</option>
@@ -163,7 +166,7 @@
                                     </div>
                                     <div class="col">
                                         <label for="semester">Semester</label>
-                                        <select id="semester" class="form-control">
+                                        <select id="semester" name="semester" class="form-control">
                                             <option value="">Select Sem</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -219,7 +222,7 @@
                                         <div class="error text-danger font-weight-bold"></div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+                                <button type="submit" class="btn btn-primary" name="submitstu">Submit</button>
                             </form>
 
                         </div>
@@ -232,8 +235,8 @@
                         <hr>
                         <form action="">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Meeting Name</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Meeting Name">
+                                <label for="meeting">Meeting Name</label>
+                                <input type="text" class="form-control" id="meeting" aria-describedby="emailHelp" placeholder="Meeting Name">
                             </div>
                             <div class="form-row form-group">
                                 <div class="col">
@@ -274,18 +277,18 @@
                         <form action="">
                             <div class="form-row form-group">
                                 <div class="col">
-                                    <label for="exampleInputEmail1">Assignment Topic</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="" placeholder="Assignment Topic">
+                                    <label for="assignmentTop">Assignment Topic</label>
+                                    <input type="text" class="form-control" id="AssignmenTop" aria-describedby="" placeholder="Assignment Topic">
                                 </div>
                                 <div class="col">
-                                    <label for="exampleInputEmail1">Assignment File</label>
-                                    <input type="File" class="form-control" id="exampleInputEmail1" aria-describedby="" placeholder="Assignment file">
+                                    <label for="AssignmentFile">Assignment File</label>
+                                    <input type="File" class="form-control" id="assignmentFile" aria-describedby="" placeholder="Assignment file">
                                 </div>
                             </div>
                             <div class="form-row form-group">
                                 <div class="col">
                                     <label for="Department">Department</label>
-                                    <select name="" id="" class="form-control">
+                                    <select name="department" id="department" class="form-control">
                                         <option value="">Select  Department</option>
                                         <option value="">MCA</option>
                                         <option value="">BCA</option>
