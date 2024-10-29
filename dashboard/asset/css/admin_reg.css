@@ -29,3 +29,13 @@
     width: 100%;
     font-weight: 700;
 }
+.error{
+    font-size: 15px;
+    font-weight: 600;
+    color: red;
+}
+input.success{
+    font-size: 15px;
+    font-weight: 700;
+    color: green;
+}

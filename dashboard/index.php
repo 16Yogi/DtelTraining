@@ -125,89 +125,103 @@
                         <h1>Add user</h1>
                         <hr>
                         <div class="col">
-                            <form action="">
+                            <form action="" onsubmit="return checkfun()">
                                 <div class="form-row form-group">
                                     <div class="col">
-                                        <label for="exampleInputEmail1">Full Name</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Full name">
+                                        <label for="fullname">Full Name</label>
+                                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Full name">
+                                        <div class="error text-danger font-weight-bold"></div>
                                     </div>
                                     <div class="col">
                                         <label for="pic">Profile Photo</label>
-                                        <input type="file" class="form-control-file border">
-                                        <!-- <input type="file" name="profile" id="" class="form-control"> -->
+                                        <input type="file" class="form-control-file border" id="pic" name="pic">
+                                        <div class="error text-danger font-weight-bold"></div>
                                     </div>
                                 </div>
                                 <div class="form-row form-group">
                                     <div class="col">
-                                        <label for="fatherName">Father Name</label>
-                                        <input type="text" class="form-control" placeholder="Father Name">
+                                        <label for="father">Father Name</label>
+                                        <input type="text" class="form-control" id="father" name="father" placeholder="Father Name">
+                                        <div class="error text-danger font-weight-bold"></div>
                                     </div>
                                     <div class="col">
-                                        <label for="motherName">Mother Name</label>
-                                        <input type="text" class="form-control" placeholder="Mother Name">
+                                        <label for="mother">Mother Name</label>
+                                        <input type="text" class="form-control" id="mother" name="mother" placeholder="Mother Name">
+                                        <div class="error text-danger font-weight-bold"></div>
                                     </div>
                                 </div>
                                 <div class="form-row form-group">
                                     <div class="col">
-                                        <label for="Department">Department</label>
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Select  Department</option>
-                                            <option value="">MCA</option>
-                                            <option value="">BCA</option>
-                                            <option value="">B.Tech</option>
-                                            <option value="">M.Tech</option>
+                                        <label for="department">Department</label>
+                                        <select id="department" class="form-control">
+                                            <option value="">Select Department</option>
+                                            <option value="MCA">MCA</option>
+                                            <option value="BCA">BCA</option>
+                                            <option value="B.Tech">B.Tech</option>
+                                            <option value="M.Tech">M.Tech</option>
                                         </select>
                                     </div>
                                     <div class="col">
-                                    <label for="Department">Semester</label>
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Select  Sem</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                            <option value="">5</option>
-                                            <option value="">6</option>
-                                            <option value="">7</option>
-                                            <option value="">8</option>
+                                        <label for="semester">Semester</label>
+                                        <select id="semester" class="form-control">
+                                            <option value="">Select Sem</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="enrollment">Enrollment</label>
-                                    <input type="text" class="form-control" placeholder="Enrollment">
+                                    <input type="text" id="enrollment" name="enrollment" class="form-control" placeholder="Enrollment">
+                                    <div class="error text-danger font-weight-bold"></div>
                                 </div>
-                                <div class="from-row form-group">
-                                    <label for="" class="pr-3">Gender:</label>
-                                    <input type="radio" name="gender" id="gender" value="male">
-                                    <label for="" class="pr-5">Male</label>
-                                    <input type="radio" name="gender" id="gender" value="female">
-                                    <label for="">Female</label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Mobile</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mobile">
+                                <div class="form-row form-group">
+                                    <label class="pr-3">Gender:</label>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="gender-male" name="gender" value="male">
+                                        <label class="form-check-label" for="gender-male">Male</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="gender-female" name="gender" value="female">
+                                        <label class="form-check-label" for="gender-female">Female</label>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Address</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Full Address">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                    <div class="error text-danger font-weight-bold"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobile">Mobile</label>
+                                    <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile">
+                                    <div class="error text-danger font-weight-bold"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Full Address">
+                                    <div class="error text-danger font-weight-bold"></div>
                                 </div>
                                 <div class="form-row form-group">
                                     <div class="col">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control" placeholder="Password">
+                                        <label for="password1">Password</label>
+                                        <input type="password" class="form-control" id="password1" name="password1" placeholder="Password">
+                                        <div class="error text-danger font-weight-bold"></div>
                                     </div>
                                     <div class="col">
-                                        <label for="password">Confirm Password</label>
-                                        <input type="password" class="form-control" placeholder="Confirm Password">
+                                        <label for="password2">Confirm Password</label>
+                                        <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm Password">
+                                        <div class="error text-danger font-weight-bold"></div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                             </form>
+
                         </div>
                     </div>
                     <!-- end add user -->
@@ -572,5 +586,6 @@
         </div>
     </div>
     <script src="asset/js/index.js"></script>
+    <script src="asset/js/user_add_reg.js"></script>
 </body>
 </html>

@@ -11,7 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/ec51b9d2d0.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="asset/css/home.css">
     
 </head>
