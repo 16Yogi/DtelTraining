@@ -1,5 +1,5 @@
 <?php
-   include("asset/database/insert.php");
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +71,7 @@
             <div class="col-9 mx-3 py-3 px-4" id="right-side">
                 <div class="tab-content " id="v-pills-tabContent">
                     <!-- profile -->
-                    <div class="tab-pane fade profile show active" id="v-pills-profile" role="tabpanel">
+                    <div class="tab-pane fade profile show active   " id="v-pills-profile" role="tabpanel">
                         <div class="row">
                             <div class="col-6">
                                 <h1>Profile</h1>
@@ -128,7 +128,10 @@
                         <h1>Add user</h1>
                         <hr>
                         <div class="col">
-                            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" onsubmit="return checkfun()">
+                        <!-- <form action="asset/database/insert.php" onsubmit="return checkfun();" method='POST' enctype="multipart/form-data"> -->
+                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" onsubmit="return checkfun()">
+
+                            <!-- <form action="asset/database/insert.php" onsubmit="return checkfun();" method='POST'> -->
                                 <div class="form-row form-group">
                                     <div class="col">
                                         <label for="fullname">Full Name</label>
@@ -187,11 +190,13 @@
                                 <div class="form-row form-group">
                                     <label class="pr-3">Gender:</label>
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" id="gender-male" name="gender" value="male">
+                                        <input type="radio" name="gender" id="gender_male" value="male" class="form-check-input">
+                                        <!-- <input type="radio" class="form-check-input" id="gender-male" name="gender" value="male"> -->
                                         <label class="form-check-label" for="gender-male">Male</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" id="gender-female" name="gender" value="female">
+                                        <input type="radio" name="gender" id="gender_female" value="female" class="form-check-input">
+                                        <!-- <input type="radio" class="form-check-input" id="gender-female" name="gender" value="female"> -->
                                         <label class="form-check-label" for="gender-female">Female</label>
                                     </div>
                                 </div>
