@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,7 @@
             </div>
             <hr>
             <div class="row py-5 mx-auto">
-                <div class="col-lg-5 col-md-6 col-sm-12 mx-auto">  
+                <div class="col-lg-5 col-md-6 col-sm-12 mx-auto mt-2">  
                     <div class="col py-5" id="home-item">
                         <!-- <a href="" class="nav-link"> -->
                             <div class="item">
@@ -32,7 +33,7 @@
                                 <h3>Student</h3>
                                 <hr>
                                 <p>
-                                    <a href="asset/html/admin_user.php">
+                                    <a href="asset/html/stu_user.php">
                                         <i class="fa-solid fa-right-to-bracket"></i>
                                         <span>Login</span>
                                     </a>
@@ -41,7 +42,7 @@
                         <!-- </a> -->
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-6 col-sm-12 mx-auto">
+                <div class="col-lg-5 col-md-6 col-sm-12 mx-auto mt-2">
                     <div class="col py-5" id="home-item">
                         <!-- <a href="asset/html/admin_user.php" class="nav-link"> -->
                             <div class="item">
@@ -56,7 +57,7 @@
                                         <span>Registration</span>
                                     </a>
                                     <span class="px-3"> | </span>
-                                    <a href="asset/html/admin_user.php">
+                                    <a href="asset/html/admin_user.php" onclick="adminfun()">
                                         <i class="fa-solid fa-right-to-bracket"></i>
                                         <span>Login</span>
                                     </a>
@@ -68,5 +69,6 @@
             </div>
         </div>
     </div>
+    <script src="asset/js/change_fun.js"></script>
 </body>
 </html>

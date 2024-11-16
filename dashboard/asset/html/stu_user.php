@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin User</title>
+    <title>Dashboard | Student User</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
@@ -25,7 +25,7 @@
                     <i class="fa-solid fa-user"></i>
                 </div>
                 <div class="col mx-auto">
-                    <h2 class="text-center" id="content">Admin user</h2>
+                    <h2 class="text-center" id="content">Student</h2>
                 </div>
                 <hr>
                 <!-- <form action=""> -->
@@ -42,7 +42,7 @@
                             <i class="fa-solid fa-lock"></i>
                         </div>
                         <div class="input-group form_input1 pt-4">
-                            <input type="submit" value="login" name="login"  class="btn btn-primary">
+                            <input type="submit" value="login" name="stu_login"  class="btn btn-primary">
                         </div>
                     </div>
 

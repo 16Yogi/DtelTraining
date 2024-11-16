@@ -13,6 +13,7 @@ INSERT INTO admin_user(fullname,profilepic,email,mobile,department,gender,passwo
 
 CREATE TABLE student_add(
     fullname VARCHAR(255) NOT NULL,
+    profile_pic BLOB NOT NUll,
     fathername VARCHAR(255) NOT NULL,
     mothername VARCHAR(255) NOT NULL,
     department VARCHAR(255) NOT NULL,
